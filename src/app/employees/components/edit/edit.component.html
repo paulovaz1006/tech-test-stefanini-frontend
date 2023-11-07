@@ -1,0 +1,38 @@
+<form class="form-default">
+  <div class="group-input">
+    <label>Nome<span>*</span></label>
+    <input
+      type="text"
+      name="name"
+      placeholder="Name"
+      class="input"
+      id="name"
+      [(ngModel)]="employee.name"
+    />
+  </div>
+  <div class="group-input">
+    <label>Idade<span>*</span></label>
+    <input
+      type="number"
+      name="age"
+      id="age"
+      placeholder="Idade"
+      class="input"
+      [(ngModel)]="employee.age"
+    />
+  </div>
+  <div class="group-input">
+    <label>Cargo<span>*</span></label>
+    <input
+      type="text"
+      name="position"
+      id="position"
+      placeholder="Cargo"
+      class="input"
+      [(ngModel)]="employee.position"
+    />
+  </div>
+  <button class="button-primary" (click)="editEmployee()" type="button">
+    Salvar
+  </button>
+</form>
