@@ -1,1 +1,39 @@
 /* You can add global styles to this file, and also import other style files */
+.p-0 {
+  padding: 0;
+}
+.button-primary {
+  border: 0;
+  background: #121d42;
+  border-radius: 14px;
+  padding: 8px 16px;
+  max-width: 250px;
+  width: auto;
+  font-size: 16px;
+  color: #fff;
+  cursor: pointer;
+  &:disabled {
+    background: #eee;
+    color: #000;
+  }
+}
+
+.button-secundary {
+  background: #ed7432;
+  cursor: pointer;
+  border: 0;
+  padding: 8px 12px;
+  border-radius: 12px;
+  color: #fff;
+}
+
+.flex {
+  display: flex;
+}
+.align-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
