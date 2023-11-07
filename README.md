@@ -1,7 +1,9 @@
 # StefaniniFront
 
 Este projeto foi gerado com o [Angular CLI](https://github.com/angular/angular-cli) na versão 14.0.0.
-Para a solução do desafio foi utilizado uma API de backend mocada usando 'json-server' e consumindo o endpoint criado para demonstrar o crud no front-end
+Para a solução do desafio foi utilizado uma API de backend mocada usando 'json-server' e consumindo o endpoint criado para demonstrar o crud no front-end.
+
+No momento os teste estão sendo implementados
 
 ## Instalar o back-end
 
