@@ -1,0 +1,73 @@
+<form class="form-default" [formGroup]="formEmployee">
+  <div class="group-input">
+    <label>Nome<span>*</span></label>
+    <input
+      type="text"
+      name="name"
+      placeholder="Name"
+      class="input"
+      formControlName="name"
+    />
+    <div
+      class="error_message"
+      *ngIf="
+        formEmployee.get('name')?.errors && formEmployee.get('name')?.touched
+      "
+    >
+      Nome é obrigatório!
+    </div>
+  </div>
+  <div class="group-input">
+    <label>Idade<span>*</span></label>
+    <input
+      type="number"
+      name="age"
+      placeholder="Idade"
+      class="input"
+      formControlName="age"
+    />
+    <div
+      class="error_message"
+      *ngIf="
+        formEmployee.get('name')?.errors && formEmployee.get('name')?.touched
+      "
+    >
+      Idade é obrigatório!
+    </div>
+  </div>
+  <div class="group-input">
+    <label>Cargo<span>*</span></label>
+    <input
+      type="text"
+      name="position"
+      placeholder="Cargo"
+      class="input"
+      formControlName="position"
+    />
+    <div
+      class="error_message"
+      *ngIf="
+        formEmployee.get('name')?.errors && formEmployee.get('name')?.touched
+      "
+    >
+      Cargo é obrigatório!
+    </div>
+  </div>
+  <button
+    class="button-primary"
+    [disabled]="!formEmployee.valid"
+    (click)="createEmployee()"
+    type="button"
+  >
+    Salvar
+  </button>
+</form>
+<section class="info-new-employee">
+  <h2>Novo funcionário</h2>
+  <ul>
+    <li>Nome: {{ formEmployee.get("name")?.value }}</li>
+    <li>Idade: {{ formEmployee.get("age")?.value }}</li>
+    <li>Cargo: {{ formEmployee.get("position")?.value }}</li>
+  </ul>
+  <button routerLink="/" class="button-secundary">Voltar para lista de funcionários</button>
+</section>
