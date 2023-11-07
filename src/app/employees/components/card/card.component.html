@@ -1,0 +1,16 @@
+<div class="card">
+  <p>Nome: {{ employee.name }}</p>
+  <p>Idade: {{ employee.age }}</p>
+  <p>Cargo: {{ employee.position }}</p>
+  <div class="buttons-card">
+    <button class="button-primary" (click)="handleDeleteEmployee(employee.id!)">
+      Excluir
+    </button>
+    <button
+      class="button-secundary"
+      routerLink="/edit-employee/{{ employee.id }}"
+    >
+      Editar
+    </button>
+  </div>
+</div>
