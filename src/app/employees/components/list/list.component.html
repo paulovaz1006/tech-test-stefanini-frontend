@@ -1,0 +1,38 @@
+<h2>Lista de funcionario</h2>
+<div class="search-bar">
+  <div>
+    <label>Buscar funcionario</label>
+    <input
+      type="search"
+      [(ngModel)]="filter"
+      class="input-search"
+      (keyup)="getEmployee()"
+    />
+    <p>{{ filter }}</p>
+  </div>
+  <div>
+    <button routerLink="/create-employee" class="button-primary">
+      Cadastrar funcionário
+    </button>
+  </div>
+</div>
+
+<div *ngIf="listEmployess.length > 0; else listEmployeeIsEmpty">
+  <ul class="list-card p-0">
+    <li *ngFor="let employee of listEmployess">
+      <app-card
+        [employee]="employee"
+        (sendData)="deleteEmployee($event)"
+      ></app-card>
+    </li>
+  </ul>
+</div>
+
+<ng-template #listEmployeeIsEmpty>
+  <p>Sem funcionarios cadastrados</p>
+</ng-template>
+
+<app-button-show-employee
+  [hasMoreEmployee]="hasMoreEmployee"
+  (click)="showMoreEmployee()"
+></app-button-show-employee>
